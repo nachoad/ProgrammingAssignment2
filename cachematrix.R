@@ -1,5 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+#############################################
+## Title:   Assignment 2
+## Autor:   Ignacio Alonso Delgado. 
+## Date:    19/08/2015
+#############################################
+## Put comments here that give an overall description of what your functions do
 
 ## Write a short comment describing this function
 ## set the value of the matrix
@@ -30,12 +34,12 @@ makeCacheMatrix <- function(x = matrix()) {
 cacheSolve <- function(x, ...) {
       ## Return a matrix that is the inverse of 'x'
       inv <- x$getInverse()
-      if (!is.null(inv)) {                      # checks if the inverse has been calculated
+      if (!is.null(inv)) {          # checks if the inverse has been calculated
             message("getting cached data of the inverse")
-            return(inv)                         # if the inverse is cached, returns it
+            return(inv)             # if the inverse is cached, returns it
       }
-      mat <- x$get()                            # else, first get the matrix
-      inv <- solve(mat, ...)                    # and calculate the inverse
-      x$setInverse(inv)                         # next cavche the inverse of the matrix
-      inv                                       # finally, it returns the result
+      mat <- x$get()                # else, first get the matrix
+      inv <- solve(mat, ...)        # and calculate the inverse
+      x$setInverse(inv)             # next cavche the inverse of the matrix
+      inv                           # finally, it returns the result
 }
